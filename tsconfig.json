@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "target": "es2021",
-    "types": ["@types/jest"],
+    "types": ["@types/node", "@types/jest"],
     "module": "nodenext",
     "moduleResolution": "nodenext",
     "noEmit": true,

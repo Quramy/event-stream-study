@@ -1,5 +1,5 @@
 export class BinToStringLine extends TransformStream<Uint8Array, string> {
-  #buf: string = "";
+  #buf = "";
   #decoder = new TextDecoder("utf8");
   constructor() {
     super({
