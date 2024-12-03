@@ -1,3 +1,3 @@
-export { BinToStringLine } from "./BinToStringLine";
+export { ParseEventStream } from "./ParseEventStream";
 export { StringLineToDataJSON } from "./StringLineToDataJSON";
-export { DataJSONToBin } from "./DataJSONToBin";
+export { UnparseEventStream } from "./UnparseEventStream";

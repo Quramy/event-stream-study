@@ -1,4 +1,4 @@
-export class DataJSONToBin extends TransformStream<
+export class UnparseEventStream extends TransformStream<
   Record<string, unknown>,
   Uint8Array
 > {

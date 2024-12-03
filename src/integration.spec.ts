@@ -1,7 +1,7 @@
 import {
-  BinToStringLine,
+  ParseEventStream,
   StringLineToDataJSON,
-  DataJSONToBin,
+  UnparseEventStream,
 } from "./transformers";
 
 describe("integration", () => {
@@ -12,7 +12,7 @@ describe("integration", () => {
       { value: "hoge" },
       { value: false },
     ])
-      .pipeThrough(new BinToStringLine())
+      .pipeThrough(new ParseEventStream())
       .pipeThrough(new StringLineToDataJSON<{ readonly value: unknown }>())
       .pipeThrough(
         new TransformStream<
@@ -24,7 +24,7 @@ describe("integration", () => {
           },
         }),
       )
-      .pipeThrough(new DataJSONToBin());
+      .pipeThrough(new UnparseEventStream());
 
     const concatBin = new ConcatBinary();
 
